@@ -1,0 +1,59 @@
+@mixin media_query($breakpoint) {
+  @if $breakpoint == 0 {
+    @content;
+  } @else {
+    @media screen and (min-width: $breakpoint * 1px) {
+      @content;
+    }
+  }
+}
+
+@mixin create_grid($cols, $breakpoint) {
+  @each $mod, $bp in $breakpoint {
+    @include media_query($bp) {
+      @for $i from 1 through $cols {
+        &.#{$mod}#{$i} {
+          $_width: (100 / ($cols / $i)) * 1%;
+          flex: 0 0 $_width;
+          -ms-flex: 0 0 $_width;
+          max-width: $_width;
+        }
+      }
+    }
+  }
+}
+
+.row {
+  display: flex;
+  display: -ms-flexbox; // Firefox
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: {
+    right: -8px;
+    left: -8px;
+  }
+}
+
+$breakpoint: (
+  "all-": 0,
+  "mobile-": 360,
+  "tablet-": 780,
+  "desktop-": 960,
+);
+.col {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  padding: 8px;
+  &.auto {
+    -ms-flex: auto;
+    flex: auto;
+    width: auto;
+    max-width: 100%;
+  }
+  @include create_grid(12, $breakpoint);
+}

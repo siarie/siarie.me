@@ -1,0 +1,10 @@
+.card {
+  width: 100%;
+  background-color: var(--primary-color);
+  height: 250px;
+  max-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius);
+}

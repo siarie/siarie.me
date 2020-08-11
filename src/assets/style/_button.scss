@@ -1,0 +1,19 @@
+a.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: var(--primary-color);
+
+  &.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    transition: color 0.3s, background-color 0.3s;
+    &:hover {
+      opacity: 1;
+      color: #e9e9fb;
+      background-color: var(--primary-color);
+    }
+  }
+}
