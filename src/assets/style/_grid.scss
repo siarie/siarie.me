@@ -12,7 +12,7 @@
   @each $mod, $bp in $breakpoint {
     @include media_query($bp) {
       @for $i from 1 through $cols {
-        &.#{$mod}#{$i} {
+        &.#{$mod}\:#{$i} {
           $_width: (100 / ($cols / $i)) * 1%;
           flex: 0 0 $_width;
           -ms-flex: 0 0 $_width;
@@ -37,10 +37,10 @@
 }
 
 $breakpoint: (
-  "all-": 0,
-  "mobile-": 360,
-  "tablet-": 780,
-  "desktop-": 960,
+  "all\:": 0,
+  "mobile": 360,
+  "tablet": 720,
+  "desktop": 960,
 );
 .col {
   -ms-flex-preferred-size: 0;

@@ -11,7 +11,7 @@ body {
   --secondary-color: #7f7ebe;
   --body-color: #03031e;
   --radius: 16px;
-  --shadow: 0 4px 16px rgba(3, 3, 30, 0.15);
+  --shadow: 0 8px 32px rgba(3, 3, 30, 0.15);
 }
 
 // Make  things smaller for mobile
@@ -29,5 +29,5 @@ body[data-theme="dark"] {
   --secondary-color: #7f7ebe;
   --body-color: #e9e9fb;
   --radius: 16px;
-  --shadow: 0 4px 16px rgba(233, 233, 251, 0.15);
+  --shadow: 0 8px 32px rgba(233, 233, 251, 0.15);
 }

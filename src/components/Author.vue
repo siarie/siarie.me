@@ -43,9 +43,16 @@ export default {
   margin-top: 16px;
   display: flex;
   box-shadow: var(--shadow);
+  @media (min-width: 360px) and (max-width: 720px) {
+    text-align: center;
+    flex-direction: column;
+  }
   &-image-wrapper {
     width: 250px;
     height: 250px;
+    @media (min-width: 360px) {
+      margin: 0 auto;
+    }
   }
   &-image {
     border-radius: 100%;
@@ -57,6 +64,9 @@ export default {
 
   &-info {
     margin-left: 32px;
+    @media (min-width: 360px) and (max-width: 720px) {
+      margin: 0;
+    }
   }
   &-name {
     font-size: 48px;

@@ -7,13 +7,16 @@
       <div class="projects" id="project">
         <h3>Latest Project</h3>
         <div class="row">
-          <div class="col tablet-6">
+          <div class="col tablet:6 mobile:12">
             <div class="card card-1">Card 1</div>
           </div>
-          <div class="col tablet-6">
+          <div class="col tablet:6 mobile:12">
             <div class="card card-2">Card 2</div>
           </div>
-          <div class="col tablet-6">
+          <div class="col tablet:6 mobile:12">
+            <div class="card card-2">Card 3</div>
+          </div>
+          <div class="col tablet:6 mobile:12">
             <div class="card card-2">Card 3</div>
           </div>
         </div>
@@ -23,23 +26,23 @@
       <div class="posts" id="posts">
         <h3>Latest Posts</h3>
         <div class="row">
-          <div class="col tablet-6 desktop-4">
+          <div class="col tablet:6 desktop:4 mobile:12">
             <div class="card card-1">Card 1</div>
           </div>
-          <div class="col tablet-6 desktop-4">
-            <div class="card card-2">Card 2</div>
-          </div>
-          <div class="col tablet-6 desktop-4">
-            <div class="card card-2">Card 3</div>
-          </div>
-          <div class="col tablet-6 desktop-4">
+          <div class="col tablet:6 desktop:4 mobile:12">
             <div class="card card-1">Card 1</div>
           </div>
-          <div class="col tablet-6 desktop-4">
-            <div class="card card-2">Card 2</div>
+          <div class="col tablet:6 desktop:4 mobile:12">
+            <div class="card card-1">Card 1</div>
           </div>
-          <div class="col tablet-6 desktop-4">
-            <div class="card card-2">Card 3</div>
+          <div class="col tablet:6 desktop:4 mobile:12">
+            <div class="card card-1">Card 1</div>
+          </div>
+          <div class="col tablet:6 desktop:4 mobile:12">
+            <div class="card card-1">Card 1</div>
+          </div>
+          <div class="col tablet:6 desktop:4 mobile:12">
+            <div class="card card-1">Card 1</div>
           </div>
         </div>
         <!-- <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/> -->
