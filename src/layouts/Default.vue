@@ -7,8 +7,14 @@
     </main>
 
     <footer class="footer">
-      <p>Made with Love by <a href="/">Sri Aspari</a></p>
-      <p>Source code available on <a href="//github.com/siarie">Github</a></p>
+      <p>
+        Made with Love by
+        <a href="/">Sri Aspari</a>
+      </p>
+      <p>
+        Source code available on
+        <a href="//github.com/siarie">Github</a>
+      </p>
     </footer>
     <ToggleTheme />
   </div>
@@ -30,7 +36,13 @@ export default {
 </script>
 
 <style lang="scss">
+#app {
+  min-width: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 .main {
+  flex: 1;
   margin: 0 auto;
   padding: 1.5vw 15px 0;
 }
