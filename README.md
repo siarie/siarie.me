@@ -1,4 +1,11 @@
-# siarie's portfolio website
+<center>
+
+# My Personal Homepage
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/siarie/web/gridsome?style=for-the-badge)
+![Netlify](https://img.shields.io/netlify/5a974eff-5734-48a8-ba7b-23f64b250e31?style=for-the-badge)
+![David](https://img.shields.io/david/dev/siarie/web?label=dependencies&style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/siarie/web?style=for-the-badge)
+</center>
 
 ## Demo URL
 
