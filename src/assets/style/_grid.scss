@@ -31,13 +31,13 @@
   -ms-flex-direction: row;
   flex-direction: row;
   margin: {
-    right: -8px;
-    left: -8px;
+    right: -16px;
+    left: -16px;
   }
 }
 
 $breakpoint: (
-  "all\:": 0,
+  "all": 0,
   "mobile": 360,
   "tablet": 720,
   "desktop": 960,
@@ -48,7 +48,7 @@ $breakpoint: (
   -ms-flex-positive: 1;
   flex-grow: 1;
   max-width: 100%;
-  padding: 8px;
+  padding: 16px;
   &.auto {
     -ms-flex: auto;
     flex: auto;

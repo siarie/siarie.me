@@ -20,6 +20,5 @@ export default {
   text-transform: uppercase;
   font-size: .6em;
   opacity: .6;
-  margin-top: 16px;
 }
 </style>

@@ -1,13 +1,22 @@
-a.btn {
+.btn {
   display: inline-block;
   text-decoration: none;
   padding: 16px 32px;
   border-radius: 8px;
   font-weight: 600;
-  color: var(--primary-color);
+
+  &.btn-small {
+    padding: 8px 16px;
+  }
+
+  &.btn-primary {
+    background-color: var(--primary-color);
+    color: #e9e9fb;
+  }
 
   &.btn-outline {
     background-color: transparent;
+    color: var(--primary-color);
     border: 2px solid var(--primary-color);
     transition: color 0.3s, background-color 0.3s;
     &:hover {

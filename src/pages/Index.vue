@@ -1,51 +1,33 @@
 <template>
-  <Layout :show-logo="false">
+  <Layout>
     <div class="container">
       <Author />
 
       <!-- List Projects -->
       <div class="projects" id="project">
-        <h3>Latest Project</h3>
+        <div class="section-sp">
+          <h3>Latest Project</h3>
+          <g-link class="btn btn-small btn-primary" :to="'/project'">More</g-link>
+        </div>
+
         <div class="row">
-          <div class="col tablet:6 mobile:12">
-            <div class="card card-1">Card 1</div>
-          </div>
-          <div class="col tablet:6 mobile:12">
-            <div class="card card-2">Card 2</div>
-          </div>
-          <div class="col tablet:6 mobile:12">
-            <div class="card card-2">Card 3</div>
-          </div>
-          <div class="col tablet:6 mobile:12">
-            <div class="card card-2">Card 3</div>
-          </div>
+          <ProjectCard
+            v-for="edge in $page.project.edges"
+            :key="edge.node.id"
+            :project="edge.node"
+          />
         </div>
       </div>
 
       <!-- List posts -->
       <div class="posts" id="posts">
-        <h3>Latest Posts</h3>
-        <div class="row">
-          <div class="col tablet:6 desktop:4 mobile:12">
-            <div class="card card-1">Card 1</div>
-          </div>
-          <div class="col tablet:6 desktop:4 mobile:12">
-            <div class="card card-1">Card 1</div>
-          </div>
-          <div class="col tablet:6 desktop:4 mobile:12">
-            <div class="card card-1">Card 1</div>
-          </div>
-          <div class="col tablet:6 desktop:4 mobile:12">
-            <div class="card card-1">Card 1</div>
-          </div>
-          <div class="col tablet:6 desktop:4 mobile:12">
-            <div class="card card-1">Card 1</div>
-          </div>
-          <div class="col tablet:6 desktop:4 mobile:12">
-            <div class="card card-1">Card 1</div>
-          </div>
+        <div class="section-sp">
+          <h3>Latest Posts</h3>
+          <g-link class="btn btn-small btn-primary" :to="'/posts'">More</g-link>
         </div>
-        <!-- <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/> -->
+        <div class="row">
+          <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node" />
+        </div>
       </div>
 
       <div class="contact" id="contact">
@@ -64,10 +46,10 @@ query {
       node {
         id
         title
-        date (format: "D. MMMM YYYY")
+        date (format: "YYYYMMDD")
         timeToRead
         description
-        cover_image (width: 770, height: 380, blur: 10)
+        cover_image (width:720, height: 360, blur: 15)
         path
         tags {
           id
@@ -77,17 +59,30 @@ query {
       }
     }
   }
+  project: allProject {
+    edges {
+      node {
+        id
+        path
+        title
+        description
+        screenshot (width: 720, height: 480, blur: 10)
+      }
+    }
+  }
 }
 </page-query>
 
 <script>
 import Author from "~/components/Author.vue";
 import PostCard from "~/components/PostCard.vue";
+import ProjectCard from "~/components/ProjectCard.vue";
 
 export default {
   components: {
     Author,
     PostCard,
+    ProjectCard,
   },
   metaInfo: {
     title: "Hello, world!",
@@ -96,13 +91,17 @@ export default {
 </script>
 
 <style lang="scss">
-.projects,
-.posts,
-.contact {
+.section-sp {
   margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+  h3 {
+    margin: 0;
+  }
 }
 
 .contact {
+  margin-top: 64px;
   padding: 32px;
   background-color: var(--bg-content-color);
   border-radius: var(--radius);

@@ -1,6 +1,6 @@
 <template>
-  <div class="col mobile-12 tablet-6 desktop-4">
-    <div class="post-card">
+  <div class="col mobile:12 tablet:6 desktop:4">
+    <div class="post-card" for="post-link">
       <div class="post-card--header">
         <g-image
           alt="Cover Image"
@@ -11,10 +11,12 @@
       </div>
       <div class="post-card--body">
         <h2 class="post-card--title" v-html="post.title" />
-
-        <PostMeta class="post-card__meta" :post="post" />
+        <p class="post-card--desc" v-if="!post.cover_image">{{ post.description }}</p>
       </div>
-      <g-link class="post-card--link" :to="post.path" />
+      <div class="post-card--footer">
+        <PostMeta :post="post" />
+      </div>
+      <g-link class="post-card--link" id="post-link" :to="post.path" />
     </div>
   </div>
 </template>
@@ -37,27 +39,46 @@ export default {
   background: var(--bg-content-color);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   position: relative;
+  height: 250px;
+  max-height: 250px;
+
+  &--link:hover + .post-card {
+    transform: scale(2);
+  }
 
   &--body {
+    flex: 1;
     padding: 16px;
-    padding-top: 8px;
+    padding-bottom: 0;
+  }
+
+  &--footer {
+    padding: 16px;
+    margin-top: 0;
   }
 
   &--title {
     margin: 0;
+    font-size: 1.5em;
   }
 
-  &--link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    overflow: hidden;
-    z-index: 0;
+  &--desc {
+    margin-top: 16px;
+    margin-bottom: 0;
   }
+  // &--link {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background: transparent;
+  //   overflow: hidden;
+  //   z-index: 0;
+  // }
 }
 </style>

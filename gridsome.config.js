@@ -29,6 +29,14 @@ module.exports = {
           }
         }
       }
+    },
+    {
+      // Project
+      use: "@gridsome/source-filesystem",
+      options: {
+        typeName: "Project",
+        path: "content/project/*.md"
+      }
     }
   ],
 
