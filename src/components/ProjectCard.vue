@@ -1,7 +1,7 @@
 <template>
-  <div class="col mobile:12 tablet:6">
+  <div class="col mobile:12 tablet:6 desktop:6">
     <div class="project-card">
-      <g-link class="project-card--link" :to="`/project`" />
+      <g-link class="project-card--link" :to="project.path" />
       <g-image class="project-card--preview" alt="Project Preview" :src="project.screenshot" />
       <div class="project-card--overlay">
         <h1 class="project-card--label">Web Design</h1>
@@ -63,6 +63,7 @@ export default {
   }
 
   &--overlay {
+    border-radius: var(--radius);
     display: flex;
     flex-direction: column;
     background: var(--bg-content-color);

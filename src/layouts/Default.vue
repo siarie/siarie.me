@@ -37,7 +37,7 @@ export default {
 
 <style lang="scss">
 #app {
-  min-width: 100vh;
+  min-height: calc(100vh - 32px);
   display: flex;
   flex-direction: column;
 }
@@ -45,6 +45,7 @@ export default {
   flex: 1;
   margin: 0 auto;
   padding: 1.5vw 15px 0;
+  width: 100%;
 }
 
 .footer {

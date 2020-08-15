@@ -1,23 +1,22 @@
 <template>
   <div class="col mobile:12 tablet:6 desktop:4">
-    <div class="post-card" for="post-link">
-      <div class="post-card--header">
+    <article class="post-card">
+      <g-link :to="post.path" class="post-card--header">
         <g-image
           alt="Cover Image"
           v-if="post.cover_image"
           class="post-card--image"
           :src="post.cover_image"
         />
-      </div>
-      <div class="post-card--body">
+      </g-link>
+      <g-link :to="post.path" class="post-card--body">
         <h2 class="post-card--title" v-html="post.title" />
         <p class="post-card--desc" v-if="!post.cover_image">{{ post.description }}</p>
-      </div>
+      </g-link>
       <div class="post-card--footer">
         <PostMeta :post="post" />
       </div>
-      <g-link class="post-card--link" id="post-link" :to="post.path" />
-    </div>
+    </article>
   </div>
 </template>
 
@@ -35,6 +34,12 @@ export default {
 </script>
 
 <style lang="scss">
+a.post-card--body {
+  color: var(--body-color);
+  &:hover {
+    text-decoration: none;
+  }
+}
 .post-card {
   background: var(--bg-content-color);
   border-radius: var(--radius);
@@ -43,11 +48,12 @@ export default {
   flex-direction: column;
   overflow: hidden;
   position: relative;
-  height: 250px;
-  max-height: 250px;
+  height: 280px;
+  max-height: 280px;
+  transition: transform .2s;
 
-  &--link:hover + .post-card {
-    transform: scale(2);
+  &:hover {
+    transform: scale(1.02);
   }
 
   &--body {
@@ -63,7 +69,7 @@ export default {
 
   &--title {
     margin: 0;
-    font-size: 1.5em;
+    font-size: 1.250em;
   }
 
   &--desc {

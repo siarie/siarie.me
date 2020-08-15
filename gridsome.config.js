@@ -11,7 +11,8 @@ module.exports = {
 
   templates: {
     Post: "/:title",
-    Tag: "/tag/:id"
+    Tag: "/tag/:id",
+    Project: "/project/:title"
   },
 
   plugins: [

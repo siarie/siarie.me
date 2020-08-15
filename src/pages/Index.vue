@@ -23,7 +23,7 @@
       <div class="posts" id="posts">
         <div class="section-sp">
           <h3>Latest Posts</h3>
-          <g-link class="btn btn-small btn-primary" :to="'/posts'">More</g-link>
+          <g-link class="btn btn-small btn-primary" :to="'/post'">More</g-link>
         </div>
         <div class="row">
           <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node" />
@@ -41,7 +41,7 @@
 
 <page-query>
 query {
-  posts: allPost(filter: { published: { eq: true }}) {
+  posts: allPost(perPage: 6, filter: { published: { eq: true }}) {
     edges {
       node {
         id
