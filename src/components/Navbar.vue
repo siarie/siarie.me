@@ -3,13 +3,15 @@
     <nav class="navbar">
       <div class="flex space-between items-center">
         <div class="navbar-left">
-          <a href="/" class="logo">siarie</a>
+          <g-link :to="`/`" class="logo">
+            <g-image src="~/assets/images/logo.png" width="32" height="32"/>
+          </g-link>
         </div>
         <div class="navbar-right">
-          <a href="#" class="item-menu">home</a>
-          <a href="#project" class="item-menu">project</a>
-          <a href="#posts" class="item-menu">blog</a>
-          <a href="#contact" class="item-menu">contact</a>
+          <g-link class="item-menu" :to="`/`">home</g-link>
+          <g-link class="item-menu" :to="`/project`">project</g-link>
+          <g-link class="item-menu" :to="`/post`">blog</g-link>
+          <g-link class="item-menu" :to="`/#contact`">contact</g-link>
         </div>
       </div>
     </nav>
@@ -33,6 +35,7 @@
 
   .logo {
     font-weight: 700;
+    padding: 0 12px;
     color: var(--primary-color);
     &:hover {
       color: var(--body-color);
