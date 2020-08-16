@@ -63,7 +63,6 @@ export default {
   }
 
   &--overlay {
-    border-radius: var(--radius);
     display: flex;
     flex-direction: column;
     background: var(--bg-content-color);

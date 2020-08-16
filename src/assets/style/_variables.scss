@@ -5,13 +5,14 @@ html {
 
 // Light default theme
 body {
-  --bg-color: #e9e9fb;
+  --bg-color: #e6e6e9;
   --bg-content-color: #ffffff;
-  --primary-color: #6764ff;
-  --secondary-color: #7f7ebe;
-  --body-color: #03031e;
+  --primary-color: #7C4DFF;
+  --secondary-color: #9671ff;
+  --light-color: #f9f9fa;
+  --body-color: #0a0a19;
   --radius: 16px;
-  --shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.03);
 }
 
 // Make  things smaller for mobile
@@ -23,11 +24,9 @@ body {
 
 // Override variables for Dark theme
 body[data-theme="dark"] {
-  --bg-color: #03031e;
-  --bg-content-color: #16162f;
-  --primary-color: #6764ff;
-  --secondary-color: #7f7ebe;
+  --bg-color: #1c1c34;
+  --bg-content-color: #03031e;
   --body-color: #e9e9fb;
   --radius: 16px;
-  --shadow: 0 4px 16px rgba(255, 255, 255, 0.15);
+  --shadow: 0 4px 24px rgba(255, 255, 255, 0.03);
 }

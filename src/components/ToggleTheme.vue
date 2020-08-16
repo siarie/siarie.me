@@ -80,7 +80,7 @@ export default {
   border-radius: 100%;
   width: 48px;
   height: 48px;
-  color: #e9e9fb;
+  color: var(--light-color);
   cursor: pointer;
   z-index: 999;
 

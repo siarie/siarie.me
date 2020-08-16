@@ -11,7 +11,7 @@
 
   &.btn-primary {
     background-color: var(--primary-color);
-    color: #e9e9fb;
+    color: var(--light-color);
   }
 
   &.btn-outline {
@@ -21,7 +21,7 @@
     transition: color 0.3s, background-color 0.3s;
     &:hover {
       opacity: 1;
-      color: #e9e9fb;
+      color: var(--light-color);
       background-color: var(--primary-color);
     }
   }

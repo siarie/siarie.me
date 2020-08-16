@@ -47,7 +47,7 @@
     color: var(--primary-color);
     font-weight: 600;
     &:hover {
-      color: #e9e9fb;
+      color: var(--light-color);
       opacity: 1;
       background-color: var(--primary-color);
       text-decoration: none;
