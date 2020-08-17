@@ -67,6 +67,7 @@ query Project ($id: ID!) {
   background: var(--bg-content-color);
   border-radius: var(--radius);
   overflow: hidden;
+  box-shadow: var(--shadow);
 
   &-header {
     padding: 16px;

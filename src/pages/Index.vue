@@ -67,6 +67,10 @@ query {
         title
         description
         screenshot (width: 720, height: 480, blur: 10)
+        tech {
+          id
+          title
+        }
       }
     }
   }

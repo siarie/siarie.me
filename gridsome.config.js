@@ -12,7 +12,8 @@ module.exports = {
   templates: {
     Post: "/:title",
     Tag: "/tag/:id",
-    Project: "/project/:title"
+    Project: "/project/:title",
+    Tech: "/project/tech/:title"
   },
 
   plugins: [
@@ -36,7 +37,13 @@ module.exports = {
       use: "@gridsome/source-filesystem",
       options: {
         typeName: "Project",
-        path: "content/project/*.md"
+        path: "content/project/*.md",
+        refs: {
+          tech: {
+            typeName: "Tech",
+            create: true
+          }
+        }
       }
     }
   ],

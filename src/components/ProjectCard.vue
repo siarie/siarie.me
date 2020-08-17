@@ -8,9 +8,9 @@
         <h2 class="project-card--title">{{ project.title }}</h2>
         <p class="project-card--description">{{ project.description }}</p>
         <div class="project-card--tags">
-          <li>Gulp.js</li>
-          <li>HTML</li>
-          <li>CSS/SCSS</li>
+          <li v-for="tc in project.tech" :key="tc.id">
+            {{ tc.title }}
+          </li>
         </div>
       </div>
     </div>
