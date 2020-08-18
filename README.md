@@ -9,7 +9,7 @@
 
 
 ## Demo URL
-https://gridsome-siarie.netlify.com
+https://siarie.netlify.com
 
 
 ## Features
@@ -34,5 +34,5 @@ https://gridsome-siarie.netlify.com
 3. Install
     - `cd [project folder]` to change directory
     - `yarn` or `npm install`
-    - `yarn develop`, `npm run develop` or `gridsome develop` (if you install Gridsome CLI) to start local dev server at `ttp://localhost:8080`
+    - `yarn develop`, `npm run develop` or `gridsome develop` (if you install Gridsome CLI) to start local dev server at `http://localhost:8080`
     - Happy coding 🎉🙌
