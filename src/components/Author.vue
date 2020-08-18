@@ -4,7 +4,7 @@
       <g-image
         alt="Author image"
         class="author-image"
-        src="~/assets/images/author.jpg"
+        src="~/assets/images/author.png"
         width="250"
         height="250"
         blur="5"
