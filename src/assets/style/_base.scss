@@ -12,18 +12,33 @@ html {
 body {
   background-color: var(--bg-color);
   color: var(--body-color);
-  transition: color 0.6s, background-color 0.6s;
   margin: 0;
   padding: 16px;
   line-height: 1.25;
+  transition: color 0.6s, background-color 0.6s;
 }
 
-a:not(.btn) {
-  color: var(--primary-color);
+a {
   text-decoration: none;
+}
+
+a:not([class]) {
+  display: inline-block;
+  color: var(--primary-color);
+  position: relative;
   transition: opacity 0.2s;
-  &:hover {
-    text-decoration: underline;
+  &::after {
+    content: '';
+    display: block;
+    background-color: var(--primary-color);
+    height: 1px;
+    width: 0;
+    border-radius: var(--radius);
+    transition: width 0.275s;
+  }
+
+  &:hover::after {
+    width: 100%;
   }
 }
 

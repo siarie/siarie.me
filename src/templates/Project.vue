@@ -57,6 +57,7 @@ query Project ($id: ID!) {
     path
     title
     description
+    content
     screenshot (blur: 10)
   }
 }

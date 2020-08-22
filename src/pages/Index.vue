@@ -7,7 +7,7 @@
       <div class="projects" id="project">
         <div class="section-sp">
           <h3>Latest Project</h3>
-          <g-link class="btn btn-small btn-primary" :to="'/project'">More</g-link>
+          <g-link class="button button-small button-primary" :to="'/project'">More</g-link>
         </div>
 
         <div class="row">
@@ -23,7 +23,7 @@
       <div class="posts" id="posts">
         <div class="section-sp">
           <h3>Latest Posts</h3>
-          <g-link class="btn btn-small btn-primary" :to="'/post'">More</g-link>
+          <g-link class="button button-small button-primary" :to="'/post'">More</g-link>
         </div>
         <div class="row">
           <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node" />
@@ -33,7 +33,7 @@
       <div class="contact" id="contact">
         <h1>Get In Touch</h1>
         <p>If you want to get in touch with me you can send me an email. I try to respond as quickly as possible.</p>
-        <a href="mailto:sriaspari@gmail.com" class="btn btn-outline">Say Hello</a>
+        <a href="mailto:sriaspari@gmail.com" class="button button-large button-outline">Say Hello</a>
       </div>
     </div>
   </Layout>

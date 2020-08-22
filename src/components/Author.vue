@@ -16,7 +16,7 @@
       <div
         class="author-intro"
       >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora recusandae ducimus non quam. Deserunt pariatur rem, non hic neque culpa error dicta deleniti optio dolorum voluptatem fugit delectus recusandae in?</div>
-      <a href="#" class="btn btn-outline">Get In Touch</a>
+      <a href="#" class="button button-large button-outline">Get In Touch</a>
     </div>
   </div>
 </template>

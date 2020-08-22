@@ -1,10 +1,60 @@
 .card {
-  width: 100%;
-  background-color: var(--primary-color);
-  height: 250px;
-  max-height: 250px;
+  background-color: var(--bg-content-color);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: color 0.275s, background-color 0.25s;
+
+  &-post {
+    position: relative;
+    height: 280px;
+    max-height: 300px;
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    &--header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-height: 200px;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    &--body {
+      flex: 1;
+      padding: 16px;
+      overflow-y: auto;
+      padding-bottom: 0;
+      width: 100%;
+    }
+
+    &--footer {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.6em;
+      text-transform: uppercase;
+      padding: 16px;
+      margin-top: 0;
+      width: 100%;
+      span {
+        opacity: 0.6;
+      }
+    }
+
+    &--title {
+      margin: 0;
+    }
+
+    &--desc {
+      margin-top: 16px;
+      margin-bottom: 0;
+    }
+  }
 }
