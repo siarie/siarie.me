@@ -48,7 +48,12 @@ $breakpoint: (
   -ms-flex-positive: 1;
   flex-grow: 1;
   max-width: 100%;
-  padding: 16px;
+  padding: {
+    right: 16px;
+    left: 16px;
+    bottom: 32px;
+    top: 0;
+  }
   &.auto {
     -ms-flex: auto;
     flex: auto;

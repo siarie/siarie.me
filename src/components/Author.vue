@@ -40,7 +40,6 @@ export default {
   background: var(--bg-content-color);
   padding: 32px;
   border-radius: var(--radius);
-  margin-top: 16px;
   display: flex;
   box-shadow: var(--shadow);
   @media (min-width: 360px) and (max-width: 720px) {

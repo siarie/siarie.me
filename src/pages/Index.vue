@@ -96,7 +96,7 @@ export default {
 
 <style lang="scss">
 .section-sp {
-  margin-top: 64px;
+  margin-bottom: 16px;
   display: flex;
   justify-content: space-between;
   h3 {
@@ -104,8 +104,15 @@ export default {
   }
 }
 
+.posts, .contact {
+  margin-top: 16px;
+}
+
+.projects {
+  margin-top: 48px;
+}
+
 .contact {
-  margin-top: 64px;
   padding: 32px;
   background-color: var(--bg-content-color);
   border-radius: var(--radius);

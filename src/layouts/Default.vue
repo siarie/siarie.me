@@ -44,7 +44,7 @@ export default {
 .main {
   flex: 1;
   margin: 0 auto;
-  padding: 1.5vw 15px 0;
+  padding-top: 48px;
   width: 100%;
 }
 

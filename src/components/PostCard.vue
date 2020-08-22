@@ -22,20 +22,14 @@
 </template>
 
 <script>
-import PostMeta from "~/components/PostMeta";
-import PostTags from "~/components/PostTags";
-
 export default {
-  components: {
-    PostMeta,
-    PostTags,
-  },
   props: ["post"],
 };
 </script>
 
 <style lang="scss">
-a.card-post--body, a.card-post--header {
+a.card-post--body,
+a.card-post--header {
   color: var(--body-color);
   &:hover {
     text-decoration: none;
