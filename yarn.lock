@@ -907,10 +907,10 @@
   dependencies:
     vue-analytics "^5.16.1"
 
-"@gridsome/remark-prismjs@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@gridsome/remark-prismjs/-/remark-prismjs-0.2.0.tgz#ffdab2045cfb85edd0ebfa9c1ab7e2c7bcf5c3c2"
-  integrity sha512-Hg7L+7Jcj1BSvzwYNSQ3X2VnfZNz6LK9hpZ3Z24ko1dr3FKcutWDT1qNbCSCKIOLoueNhjTNylHB/qnOWBEFuA==
+"@gridsome/remark-prismjs@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@gridsome/remark-prismjs/-/remark-prismjs-0.4.0.tgz#edcf5c6728e70f3fa0428ac31e79baa377a605a5"
+  integrity sha512-ZXfRcWaQvWMH7M1Q7zj5JdA0dTyEN6tz3yCZ/m914zv/IH3eS32uPutwGswoAzAfMBHA5voy+6mjkFv4Gft7UA==
   dependencies:
     escape-html "^1.0.3"
     hast-util-to-html "^6.0.2"
