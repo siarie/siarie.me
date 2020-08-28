@@ -1,7 +1,7 @@
 <h1 align="center">My Personal Homepage</h1>
 <p align="center">
   <img src="https://img.shields.io/github/package-json/dependency-version/siarie/web/gridsome?style=for-the-badge" alt="Gridsome version" />
-  <img src="https://img.shields.io/netlify/5a974eff-5734-48a8-ba7b-23f64b250e31?style=for-the-badge" alt="Netlify Build Status" />
+  <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/siarie/web/Node.js%20CI?style=for-the-badge">
   <img src="https://img.shields.io/david/dev/siarie/web?label=dependencies&style=for-the-badge" alt="GitHub package.json dependency version" />
   <img src="https://img.shields.io/github/last-commit/siarie/web?style=for-the-badge" alt="Last Commit" />
 </p>
