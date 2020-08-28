@@ -9,7 +9,7 @@
 
 
 ## Demo URL
-https://siarie.netlify.com
+https://siarie.github.io
 
 
 ## Features
