@@ -89,8 +89,15 @@ export default {
     ProjectCard,
   },
   metaInfo: {
-    title: "Hello, world!",
+    title: "Home",
+    meta: [
+      {
+        name: "author",
+        content: "Sri Aspari"
+      }
+    ]
   },
+
 };
 </script>
 

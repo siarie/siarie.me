@@ -1,12 +1,28 @@
+button {
+  border: none;
+  cursor: pointer;
+}
+
 .button {
   display: inline-block;
   text-decoration: none;
   padding: 8px 32px;
+  margin: 0 4px;
   border-radius: 8px;
   font-weight: 600;
 
   &.button-small {
     padding: 7px 28px;
+  }
+
+  &.button-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+    border-radius: 100%;
   }
 
   &.button-large {
@@ -16,10 +32,14 @@
   &.button-primary {
     background-color: var(--primary-color);
     color: var(--light-color);
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   &.button-outline {
     background-color: transparent;
+    padding: 8px 48px;
     color: var(--primary-color);
     border: 2px solid var(--primary-color);
     transition: color 0.3s, background-color 0.3s;

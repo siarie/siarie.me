@@ -16,13 +16,14 @@
         <a href="//github.com/siarie">Github</a>
       </p>
     </footer>
-    <ToggleTheme />
+    <!-- <ToggleTheme /> -->
+    <FloatingButtons />
   </div>
 </template>
 
 <script>
 import Navbar from "~/components/Navbar";
-import ToggleTheme from "~/components/ToggleTheme";
+import FloatingButtons from "~/components/FloatingButtons";
 
 export default {
   props: {
@@ -30,7 +31,7 @@ export default {
   },
   components: {
     Navbar,
-    ToggleTheme,
+    FloatingButtons,
   },
 };
 </script>

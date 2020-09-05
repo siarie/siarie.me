@@ -9,6 +9,8 @@
   --color-indigo: #5856d6;
   --color-purple: #af52de;
   --color-pink: #ff2d55;
+  --color-white: #ffffff;
+  --color-black: #1e1e1e;
   --color-gray-01: #575759;
   --color-gray-02: #6a6a6d;
   --color-gray-03: #7e7e80;
@@ -31,6 +33,8 @@
   --color-indigo: #5e5ce6;
   --color-purple: #bf5af2;
   --color-pink: #ff2d55;
+  --color-white: #1e1e1e;
+  --color-black: #ffffff;
   --color-gray-01: #adadae;
   --color-gray-02: #9b9b9c;
   --color-gray-03: #89898a;
@@ -41,8 +45,6 @@
   --color-gray-08: #2e2e30;
   --color-gray-09: #1c1c1e;
 }
-
-
 
 // Default variables
 html {
@@ -57,7 +59,7 @@ body {
   --secondary-color: var(--color-gray-04);
   --light-color: #f9f9fa;
   --body-color: #0a0a19;
-  --border-content: 1px solid rgba(0,0,0, 0.12);
+  --border-content: 1px solid rgba(0, 0, 0, 0.12);
   --radius: 16px;
   --shadow: 0 12px 15px rgba(0, 0, 0, 0.25), 0 0 10px rgba(0, 0, 0, 0.15);
 }
@@ -72,9 +74,9 @@ body {
 // Override variables for Dark theme
 body[data-theme="dark"] {
   --bg-color: var(--color-gray-08);
-  --bg-content-color: var(--color-gray-09);;
+  --bg-content-color: var(--color-gray-09);
   --body-color: #e9e9fb;
   --radius: 16px;
-  --border-content: 1px solid rgba(255,255,255, 0.12);
+  --border-content: 1px solid rgba(255, 255, 255, 0.12);
   --shadow: 0 12px 15px rgba(0, 0, 0, 0.25), 0 0 10px rgba(0, 0, 0, 0.15);
 }
