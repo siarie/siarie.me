@@ -28,9 +28,8 @@ jobs:
         npm install
         npm run build
         git clone https://${{ secrets.GIT_USER }}:${{ secrets.GIT_TOKEN }}@github.com/siarie/siarie.github.io
-        find siarie.github.io ! -name .git -delete
-        cp -rf ./dist/. siarie.github.io
         cd siarie.github.io
+        find . ! -name .git -delete;cp -rf ../dist/. siarie.github.io
         git add .
         git commit -m "Last update $(TZ='Asia/Jakarta' date)"
         git push
