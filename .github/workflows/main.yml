@@ -23,7 +23,7 @@ jobs:
       run: |
         git config --global user.email "${{ secrets.GIT_EMAIL }}"
         git config --global user.name "${{ secrets.GIT_NAME }}"
-    - name: Commit Website
+    - name: Build Website
       run: |
         npm install
         npm run build
@@ -31,6 +31,9 @@ jobs:
         cd siarie.github.io
         find . ! -name .git -delete
         cp -rf ../dist/. .
-        git add .
-        git commit -m "Last update $(TZ='Asia/Jakarta' date)"
-        git push
+    - name: Commit Website
+      run: |
+          ll -a
+#         git add .
+#         git commit -m "Last update $(TZ='Asia/Jakarta' date)"
+#         git push
