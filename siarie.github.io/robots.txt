@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-
-Dissallow: /assets
-Dissallow: /404
-Dissallow: /404.html
