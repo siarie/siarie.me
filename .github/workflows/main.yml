@@ -25,15 +25,16 @@ jobs:
         git config --global user.name "${{ secrets.GIT_NAME }}"
     - name: Build Website
       run: |
-        npm install
-        npm run build
+        yarn
+        yarn build
         git clone https://${{ secrets.GIT_USER }}:${{ secrets.GIT_TOKEN }}@github.com/siarie/siarie.github.io
         cd siarie.github.io
         find . ! -name .git -delete
         cp -rf ../dist/. .
     - name: Commit Website
       run: |
-          ll -a
+          ls -la
+          git status
 #         git add .
 #         git commit -m "Last update $(TZ='Asia/Jakarta' date)"
 #         git push
