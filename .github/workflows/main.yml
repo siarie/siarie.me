@@ -23,17 +23,27 @@ jobs:
       run: |
         git config --global user.email "${{ secrets.GIT_EMAIL }}"
         git config --global user.name "${{ secrets.GIT_NAME }}"
-    - name: Build Website
+    - name: Building Website
       run: |
         yarn
         yarn build
-        git clone https://${{ secrets.GIT_USER }}:${{ secrets.GIT_TOKEN }}@github.com/siarie/siarie.github.io
-        cd siarie.github.io
-        find . ! -name .git -delete
-        cp -rf ../dist/. .
-    - name: Commit Website
+    - name: Clone destination repositories
       run: |
+        git clone https://${{ secrets.GIT_USER }}:${{ secrets.GIT_TOKEN }}@github.com/siarie/siarie.github.io
+        ls -al siarie.github.io
+    - name: Clean destination directory
+      run: |
+        find siarie.github.io | grep -v ^siarie.github.io/\.git | grep -v ^siarie.github.io | xargs rm -rf
+        ls -al siarie.github.io
+    - name: Copy content to git repo
+      run: |
+        cp -r dist/* siarie.github.io
         cd siarie.github.io
+        ls -la
+    - name: Add git commit
+      run: |
         git add .
+        git status
         git commit -m "Last update $(TZ='Asia/Jakarta' date)"
-        git push
+    - name: Pushing git commit
+      run: git push
