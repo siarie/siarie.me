@@ -29,7 +29,7 @@ jobs:
         npm run build
         git clone https://${{ secrets.GIT_USER }}:${{ secrets.GIT_TOKEN }}@github.com/siarie/siarie.github.io
         cd siarie.github.io
-        rm -r !(.git)
+        find . ! -name .git -delete
         cp -rf ../dist/. siarie.github.io
         git add .
         git commit -m "Last update $(TZ='Asia/Jakarta' date)"
