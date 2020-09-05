@@ -38,12 +38,11 @@ jobs:
     - name: Copy content to git repo
       run: |
         cp -r dist/* siarie.github.io
+    - name: Deploying website
+      run: |
         cd siarie.github.io
         ls -la
-    - name: Add git commit
-      run: |
         git add .
         git status
         git commit -m "Last update $(TZ='Asia/Jakarta' date)"
-    - name: Pushing git commit
-      run: git push
+        git push
