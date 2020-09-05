@@ -33,8 +33,7 @@ jobs:
         cp -rf ../dist/. .
     - name: Commit Website
       run: |
-          ls -la
-          git status
-#         git add .
-#         git commit -m "Last update $(TZ='Asia/Jakarta' date)"
-#         git push
+        cd siarie.github.io
+        git add .
+        git commit -m "Last update $(TZ='Asia/Jakarta' date)"
+        git push
