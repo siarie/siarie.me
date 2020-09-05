@@ -19,15 +19,18 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Initialize Git User
+      run: |
+        git config --global user.email "${{ secrets.GIT_EMAIL }}"
+        git config --global user.name "${{ secrets.GIT_NAME }}"
     - name: Install Website
       run: |
         npm install
         npm run build
         git clone https://${{ secrets.GIT_USER }}:${{ secrets.GIT_TOKEN }}@github.com/siarie/siarie.github.io
+        rm -r siarie.github.io/!(.git)
         cp -rf ./dist/. siarie.github.io
         cd siarie.github.io
-        git config --global user.email "${{ secrets.GIT_EMAIL }}"
-        git config --global user.name "${{ secrets.GIT_NAME }}"
         git add .
         git commit -m "Last update $(TZ='Asia/Jakarta' date)"
         git push
