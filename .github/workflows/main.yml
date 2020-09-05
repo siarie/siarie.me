@@ -34,6 +34,7 @@ jobs:
         pwd
         ls -la
         # cd siarie.github.io
-        # git add .
+        git add .
+        git status
         # git commit -m "Last update $(TZ='Asia/Jakarta' date)"
         # git push
