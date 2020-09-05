@@ -27,7 +27,7 @@ jobs:
       run: |
         git clone https://${{ secrets.GIT_USER }}:${{ secrets.GIT_TOKEN }}@github.com/siarie/siarie.github.io
         cd siarie.github.io
-        find . ! -name .git -delete
+        rm -r !(.git)
         cp -rf ../dist/. siarie.github.io
     - name: Initialize Git User
       run: |
