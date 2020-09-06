@@ -2,7 +2,7 @@
   <Layout>
     <div class="container">
       <Author />
-      <SkillSet class="projects"/>
+      <SkillSet />
       <!-- List Projects -->
       <div class="projects" id="project">
         <div class="section-sp">
@@ -89,11 +89,6 @@ export default {
     PostCard,
     ProjectCard,
     SkillSet,
-  },
-  data() {
-    return {
-      resume: resume,
-    };
   },
   metaInfo: {
     title: "Home",

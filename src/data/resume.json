@@ -8,7 +8,7 @@
     "framework": ["Bootstrap", "Codeigniter 3", "Flask", "Gridsome", "Tailwind", "Vue.js"],
     "tools": ["Git", "Gulp", "SASS/SCSS", "Webpack"],
     "storage": ["MySQL", "Postgresql", "SQLite"],
-    "platform": ["Heroku", "Github", "Gitlab", "Linux", "Netlify", "Windows"],
+    "platform": ["Heroku", "Github", "Gitlab", "Linux", "Netlify"],
     "design": ["Figma", "Inkscape"]
   }
 }
