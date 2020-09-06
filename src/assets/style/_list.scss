@@ -1,0 +1,26 @@
+.list-group {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &-item {
+    
+    border-radius: 8px;
+    margin-bottom: 4px;
+    overflow: hidden;
+    
+
+    a {
+      padding: 8px 16px;
+      width: 100%;
+      font-weight: 600;
+      transition: background-color .2s cubic-bezier(.77,.7,.85,1.04);
+      &::after {
+        content: none;
+      }
+      &:hover {
+        background-color: var(--primary-color-02);
+      }
+    }
+  }
+}

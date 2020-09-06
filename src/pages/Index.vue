@@ -2,7 +2,7 @@
   <Layout>
     <div class="container">
       <Author />
-
+      <SkillSet class="projects"/>
       <!-- List Projects -->
       <div class="projects" id="project">
         <div class="section-sp">
@@ -81,23 +81,29 @@ query {
 import Author from "~/components/Author.vue";
 import PostCard from "~/components/PostCard.vue";
 import ProjectCard from "~/components/ProjectCard.vue";
+import SkillSet from "~/components/SkillSet.vue";
 
 export default {
   components: {
     Author,
     PostCard,
     ProjectCard,
+    SkillSet,
+  },
+  data() {
+    return {
+      resume: resume,
+    };
   },
   metaInfo: {
     title: "Home",
     meta: [
       {
         name: "author",
-        content: "Sri Aspari"
-      }
-    ]
+        content: "Sri Aspari",
+      },
+    ],
   },
-
 };
 </script>
 
@@ -111,7 +117,8 @@ export default {
   }
 }
 
-.posts, .contact {
+.posts,
+.contact {
   margin-top: 16px;
 }
 

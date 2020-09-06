@@ -7,9 +7,13 @@ button {
   display: inline-block;
   text-decoration: none;
   padding: 8px 32px;
-  margin: 0 4px;
   border-radius: 8px;
   font-weight: 600;
+  margin: 4px 0;
+
+  + .button {
+    margin-left: 8px;
+  }
 
   &.button-small {
     padding: 7px 28px;

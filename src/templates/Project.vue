@@ -20,8 +20,6 @@
       <div class="post-comments">
         <!-- Add comment widgets here -->
       </div>
-
-      <Author class="post-author" />
     </div>
   </Layout>
 </template>

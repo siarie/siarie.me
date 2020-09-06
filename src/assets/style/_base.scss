@@ -31,10 +31,10 @@ a:not([class]) {
     content: '';
     display: block;
     background-color: var(--primary-color);
-    height: 1px;
+    height: 2px;
     width: 0;
     border-radius: var(--radius);
-    transition: width 0.275s;
+    transition: width 0.175s;
   }
 
   &:hover::after {

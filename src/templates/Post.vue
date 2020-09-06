@@ -58,6 +58,12 @@ query Post ($id: ID!) {
 <style lang="scss">
 .card.post {
   margin-bottom: 16px;
+  .card-body {
+    padding: 16px 32px;
+    img {
+      border-radius: var(--radius);
+    }
+  }
   .card-header {
     text-align: center;
     box-shadow: none;

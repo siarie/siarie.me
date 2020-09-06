@@ -25,7 +25,6 @@
   font-size: 16px;
   border-radius: calc(var(--radius) / 2);
   overflow: hidden;
-  box-shadow: var(--shadow);
 
   a {
     text-decoration: none;

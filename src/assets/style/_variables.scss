@@ -48,20 +48,21 @@
 
 // Default variables
 html {
-  --base-font-size: 16px;
+  --base-font-size: 18px;
 }
 
 // Light default theme
 body {
   --bg-color: var(--color-gray-09);
   --bg-content-color: #ffffff;
+  --primary-color-02: #cdccf3;
   --primary-color: var(--color-indigo);
   --secondary-color: var(--color-gray-04);
   --light-color: #f9f9fa;
   --body-color: #0a0a19;
   --border-content: 1px solid rgba(0, 0, 0, 0.12);
   --radius: 16px;
-  --shadow: 0 12px 15px rgba(0, 0, 0, 0.25), 0 0 10px rgba(0, 0, 0, 0.15);
+  --shadow: 0 8px 10px rgba(0, 0, 0, 0.25), 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
 // Make  things smaller for mobile
@@ -78,5 +79,4 @@ body[data-theme="dark"] {
   --body-color: #e9e9fb;
   --radius: 16px;
   --border-content: 1px solid rgba(255, 255, 255, 0.12);
-  --shadow: 0 12px 15px rgba(0, 0, 0, 0.25), 0 0 10px rgba(0, 0, 0, 0.15);
 }

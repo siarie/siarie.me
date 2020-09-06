@@ -6,33 +6,27 @@
         class="author-image"
         src="~/assets/images/author.png"
         width="250"
-        height="250"
         blur="5"
       />
     </div>
     <div class="author-info">
-      <div class="author-name">Sri Aspari</div>
-      <div class="author-title">Web Developer</div>
-      <div
-        class="author-intro"
-      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora recusandae ducimus non quam. Deserunt pariatur rem, non hic neque culpa error dicta deleniti optio dolorum voluptatem fugit delectus recusandae in?</div>
-      <a href="/#contact" class="button button-large button-primary">Get In Touch</a>
+      <div class="author-name">{{ resume.name }}</div>
+      <div class="author-title">{{ resume.title }}</div>
+      <div class="author-intro" v-html="resume.bio" />
+      <a :href="`mailto:${resume.email}`" class="button button-large button-primary">Get In Touch</a>
       <a href="#" class="button button-large button-outline">Resume</a>
     </div>
   </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
-
 <script>
+import resume from "~/data/resume.json";
 export default {
-  props: ["showTitle"],
+  data() {
+    return {
+      resume: resume,
+    };
+  },
 };
 </script>
 
@@ -48,23 +42,28 @@ export default {
     flex-direction: column;
   }
   &-image-wrapper {
+    display: flex;
+    justify-content: center;
+    border-radius: calc(var(--radius) / 2);
+    flex-shrink: 0;
     width: 250px;
-    height: 250px;
-    @media (min-width: 360px) {
+    height: 340px;
+    border: 4px solid var(--primary-color);
+    overflow: hidden;
+    @media (min-width: 360px) and (max-width: 719px){
+      border-radius: 100%;
       margin: 0 auto;
+      height: 250px;
     }
   }
   &-image {
-    border-radius: 100%;
-    width: 250px;
-    height: 250px;
-    box-shadow: 4px -4px 0 4px #cccbff, -4px 4px 0 4px var(--primary-color),
-      -4px -4px 0 4px #cccbff, 4px 4px 0 4px var(--primary-color);
+    width: auto;
+    height: 100%;
   }
 
   &-info {
     margin-left: 32px;
-    @media (min-width: 360px) and (max-width: 720px) {
+    @media (min-width: 360px) and (max-width: 719px) {
       margin: 0;
     }
   }
