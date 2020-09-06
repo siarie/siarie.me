@@ -5,7 +5,7 @@
         <div class="modal-header">Settings</div>
         <div class="modal-body">
           <div class="row">
-            <div class="col desktop:4">Dark Theme</div>
+            <div class="col mobile:4 tablet:3">Dark Theme</div>
             <div class="col col:auto">
               <div class="input-toggle">
                 <input type="checkbox" :checked="darkTheme" @click="toggleTheme" />
@@ -73,6 +73,9 @@ export default {
   z-index: 99999;
   overflow: hidden;
   visibility: hidden;
+  @media (min-width: 360px) and (max-width: 720px) {
+    padding: 16px;
+  }
 
   &.active {
     visibility: visible;
@@ -91,6 +94,7 @@ export default {
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow);
+    transition: background 0.2s;
   }
 
   &-header {
