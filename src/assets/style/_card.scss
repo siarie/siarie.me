@@ -9,6 +9,33 @@
   box-shadow: var(--shadow);
   transition: color 0.275s, background-color 0.25s;
 
+  &-header {
+    box-shadow: 0 0 4px 2px rgba($color: #000000, $alpha: 0.08);
+    font-weight: bold;
+    padding: 16px;
+    width: 100%;
+  }
+
+  &-image {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 360px;
+    overflow: hidden;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+
+  &-body {
+    display: block;
+    padding: 16px;
+    width: 100%;
+  }
+
   &-post {
     position: relative;
     height: 280px;

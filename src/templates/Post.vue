@@ -1,40 +1,27 @@
 <template>
   <Layout>
     <div class="container">
-      <article class="post">
-        <div class="post-cover">
-          <g-image alt="Cover Image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
+      <article class="card post">
+        <div class="card-image" v-if="$page.post.cover_image">
+          <g-image :src="$page.post.cover_image" :alt="$page.post.title" />
         </div>
-        <div class="post-header">
-          <h1 class="post-header-title">{{ $page.post.title }}</h1>
-        </div>
-        <div class="post-body">
-          <div class="post__content" v-html="$page.post.content" />
-
-          <div class="post__footer">
-            <PostTags :post="$page.post" />
+        <div class="card-header">
+          <h1 class="title">{{ $page.post.title }}</h1>
+          <div class="metainfo">
+            <span>{{ $page.post.date }}</span>
+            <span>{{ $page.post.timeToRead }} min read</span>
           </div>
         </div>
+        <div class="card-body">
+          <div v-html="$page.post.content" />
+        </div>
       </article>
-
-      <div class="post-comments">
-        <!-- Add comment widgets here -->
-      </div>
-
-      <Author class="post-author" />
     </div>
   </Layout>
 </template>
 
 <script>
-import PostTags from "~/components/PostTags";
-import Author from "~/components/Author.vue";
-
 export default {
-  components: {
-    Author,
-    PostTags,
-  },
   metaInfo() {
     return {
       title: this.$page.post.title,
@@ -54,7 +41,7 @@ query Post ($id: ID!) {
   post: post (id: $id) {
     title
     path
-    date (format: "D. MMMM YYYY")
+    date (format: "D MMM YYYY")
     timeToRead
     tags {
       id
@@ -68,18 +55,38 @@ query Post ($id: ID!) {
 }
 </page-query>
 
-<style lang="scss" scoped>
-.post {
-  background: var(--bg-content-color);
-  border-radius: var(--radius);
-  overflow: hidden;
+<style lang="scss">
+.card.post {
+  margin-bottom: 16px;
+  .card-header {
+    text-align: center;
+    box-shadow: none;
+    margin-bottom: 16px;
+    .title {
+      font-size: 32px;
+      font-weight: bolder;
+      margin: 0 auto;
+      max-width: 70%;
+      margin-bottom: 1rem;
 
-  &-header {
-    padding: 16px;
-  }
-
-  &-body {
-    padding: 16px;
+      @media (min-width: 360px) and (max-width: 720px) {
+        max-width: 100%;
+      }
+    }
+    .metainfo {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--color-gray-04);
+      span {
+        text-transform: uppercase;
+        &:not(:last-child)::after {
+          content: "\2022";
+          display: inline-block;
+          margin: 0 4px;
+          color: var(--color-gray-01);
+        }
+      }
+    }
   }
 }
 </style>
