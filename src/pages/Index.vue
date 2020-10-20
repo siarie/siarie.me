@@ -66,7 +66,7 @@ query {
         path
         title
         description
-        screenshot (width: 720, height: 480, blur: 10)
+        screenshot (width: 720, height: 480, blur: 0)
         tech {
           id
           title

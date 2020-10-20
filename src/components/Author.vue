@@ -4,7 +4,7 @@
       <g-image
         alt="Author image"
         class="author-image"
-        src="~/assets/images/author.png"
+        src="~/assets/images/author.webp"
         width="250"
         blur="5"
       />
@@ -44,6 +44,7 @@ export default {
   &-image-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
     border-radius: calc(var(--radius) / 2);
     flex-shrink: 0;
     width: 250px;
@@ -57,8 +58,8 @@ export default {
     }
   }
   &-image {
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
   }
 
   &-info {
