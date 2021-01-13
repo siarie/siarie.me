@@ -12,7 +12,7 @@
     "@gridsome/source-filesystem": "^0.6.0",
     "@gridsome/transformer-remark": "^0.6.3",
     "axios": "^0.21.1",
-    "gridsome": "^0.7.22",
+    "gridsome": "^0.7.23",
     "moment": "^2.29.1"
   },
   "devDependencies": {
