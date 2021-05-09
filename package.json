@@ -1,22 +1,14 @@
 {
   "name": "web",
+  "description": "my personal page",
   "private": true,
   "scripts": {
-    "build": "gridsome build",
-    "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "build": "next build",
+    "dev": "next dev"
   },
   "dependencies": {
-    "@gridsome/plugin-google-analytics": "^0.1.2",
-    "@gridsome/remark-prismjs": "^0.5.0",
-    "@gridsome/source-filesystem": "^0.6.0",
-    "@gridsome/transformer-remark": "^0.6.3",
-    "axios": "^0.21.1",
-    "gridsome": "^0.7.22",
-    "moment": "^2.29.1"
-  },
-  "devDependencies": {
-    "node-sass": "^5.0.0",
-    "sass-loader": "^10.1.0"
+    "next": "^10.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
