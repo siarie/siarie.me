@@ -2,6 +2,7 @@
 
 :root {
 	--black: #161616;
+	--indigo: 94, 92, 230;
 }
 
 *, *::before, *::after {
@@ -23,6 +24,14 @@ main {
 	width: 100%;
 	padding: .5rem;
 	min-height: 100vh;
+}
+
+a {
+	color: rgb(var(--indigo));
+
+	&:hover {
+		color: rgba(var(--indigo), .8);
+	}
 }
 
 img {
