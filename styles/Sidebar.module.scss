@@ -1,0 +1,51 @@
+.sidebar {
+	display: block;
+
+	&Left {
+		max-width: 280px;
+		width: 100%;
+	}
+
+	.section {
+		padding: .5rem;
+
+		&Profile {
+			display: flex;
+			flex-direction: column;
+
+			&Photo {
+				border-radius: 50%;
+				margin: 0 auto .8rem;
+				overflow: hidden;
+			}
+
+			&Stats {
+				display: flex;
+				margin-bottom: .5rem;
+
+				.stats {
+					flex-basis: calc(100% / 3);
+					text-align: center;
+
+					&Header {
+						font-size: .6rem;
+					}
+
+					&Value {
+						font-weight: bold;
+					}
+				}
+			}
+
+			&Button {
+				display: flex;
+
+				button {
+					flex-grow: 1;
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+		}
+	}
+}
