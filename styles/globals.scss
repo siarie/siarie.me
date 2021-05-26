@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
+:root {
+	--black: #161616;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Syne Mono', monospace;
+	font-size: 16px;
+}
+
+body {
+	color: var(--black);
+	margin: 0;
+}
+
+main {
+	display: flex;
+	width: 100%;
+	padding: .5rem;
+	min-height: 100vh;
+}
+
+img {
+	display: block;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 0 1rem;
+}

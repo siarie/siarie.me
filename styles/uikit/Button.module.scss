@@ -1,0 +1,35 @@
+.button {
+	background-color: white;
+	border-width: 2px;
+	border-style: solid;
+	border-color: var(--black);
+	border-radius: .2rem;
+	cursor: pointer;
+	display: inline-block;
+	font-family: monospace;
+	font-size: 1rem;
+	font-weight: bold;
+	margin-bottom: .5rem;
+	text-align: center;
+	text-decoration: none;
+	padding: .5rem 2rem;
+	box-shadow: 2px 2px var(--black);
+	transition: box-shadow .275s ease;
+
+	&:not(:last-child) {
+		margin-right: .5rem;
+	}
+
+	&:hover {
+		box-shadow: 0 0 var(--black);
+	}
+
+	&Block {
+		display: block;
+		width: 100%;
+	}
+
+	&Small {
+		padding: .2rem .8rem;
+	}
+}
